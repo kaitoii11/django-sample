@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import HttpResponse
+from django.http import Http404
 from .models import article
 
 # Create your views here.
@@ -17,4 +18,8 @@ def article(request, id):
     return render_to_response('news/article.html')
 
 def article2(request, id):
-    return render_to_response('news/article_template.html', {'article':article})
+    try:
+        a = article.objects.get(pk=id)
+    except:
+        raise Http404("Article does not exist")		
+    return render_to_response('news/article_template.html', {'article':a})
