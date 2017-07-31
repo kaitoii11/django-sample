@@ -2,9 +2,8 @@
 
 {% block content %}
 	<header>
-		<!--<h2>{{ article.title }}</h2> -->
-		<h2>{{ title }}</h2>
+		<h2>{{ object.title }}</h2>
 	</header>
-	<!-- {{ article.body }} -->
-{{ body }}
+{{ object.body }}
+<p><a href="{{ object.url }}">url</a></p>
 {% endblock content %}
