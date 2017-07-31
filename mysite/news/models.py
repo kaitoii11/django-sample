@@ -9,3 +9,7 @@ class article(models.Model):
             blank=True, null=True)
     first = models.CharField(max_length=1)
     url = models.IntegerField()
+
+    class Meta:
+        db_table='sample'
+        managed = False
