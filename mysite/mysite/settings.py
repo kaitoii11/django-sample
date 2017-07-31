@@ -131,3 +131,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/images/'),
     '/var/www/static/',
 ]
+
+ALLOWED_HOSTS = ['*']
