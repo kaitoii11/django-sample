@@ -9,16 +9,6 @@ class ArticleListView(ListView):
     template_name='news/index_template.html'
     model = Article
 
-    def index2(request):
-        return render_to_response('news/index_template.html')
-
 class ArticleDetailView(DetailView):
     template_name = 'news/article_template.html'
     model = Article
-
-    def article2(request, id):
-        try:
-            a = article.objects.get(pk=id)
-        except:
-            raise Http404("Article does not exist")
-        return render_to_response('news/article_template.html', {'article':a})
