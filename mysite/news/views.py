@@ -5,23 +5,17 @@ from django.http import Http404
 from .models import Article
 
 # Create your views here.
-def index(request):
-    return render_to_response('news/index.html')
-
 class ArticleListView(ListView):
+    template_name='news/index_template.html'
     model = Article
 
     def index2(request):
         return render_to_response('news/index_template.html')
 
-
-def article(request, id):
-#    post = get_object_or_404()
-#    return render(request, 'news/detail.html', {'post':post})
-    return render_to_response('news/article.html')
-
 class ArticleDetailView(DetailView):
+    template_name = 'news/article_template.html'
     model = Article
+
     def article2(request, id):
         try:
             a = article.objects.get(pk=id)

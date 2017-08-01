@@ -31,62 +31,13 @@
 			<div id="main">
 				<div class="inner">
 					<div class="columns">
-						<!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
+						{% for o in object_list|slice:":16" %}
 							<div class="image fit">
-								<a href="{% static "article.html" %}"><img src="{% static "images/pic01.jpg" %}" alt="" /></a>
+								<a href="article/{{ o.id }}"><img src="{% static 'images'%}/{{ o.first }}.jpg "  alt="" /></a>
 							</div>
-							<div class="image fit">
-								<a href="{% url 'news:articles2' 1 %}"><img src="{% static "images/pic02.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic03.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article/{{ article.id }}"><img src="{% static "images/pic04.jpg" %}"  alt="" /></a>
-							</div>
-
-						<!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic06.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic05.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic08.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic07.jpg" %}"  alt="" /></a>
-							</div>
-
-						<!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic09.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic12.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic11.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic10.jpg" %}"  alt="" /></a>
-							</div>
-
-						<!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic13.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic14.jpg" %}"  alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic15.jpg"  %}" alt="" /></a>
-							</div>
-							<div class="image fit">
-								<a href="article.html"><img src="{% static "images/pic16.jpg" %}" alt="" /></a>
-							</div>
-
+						{% empty %}
+							<li> No articles yet. </li>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
