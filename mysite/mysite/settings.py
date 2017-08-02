@@ -131,8 +131,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/news/'),
-    os.path.join(BASE_DIR, 'templates/images/'),
-    '/var/www/static/',
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 ALLOWED_HOSTS = ['*']
