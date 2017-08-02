@@ -33,7 +33,11 @@
 					<div class="columns">
 						{% for o in object_list|slice:":16" %}
 							<div class="image fit">
-								<a href="article/{{ o.id }}"><img src="{% static 'images'%}/{{ o.first }}.jpg "  alt="" /></a>
+								{% if o.first == "0" %}
+									<a href="article/{{ o.id }}"><img src="{% static 'images/Number-girl.jpg' %} "  alt="" /></a>
+								{% else %}
+									<a href="article/{{ o.id }}"><img src="{% static 'images'%}/{{ o.first }}.jpg "  alt="" /></a>
+								{% endif %}
 							</div>
 						{% empty %}
 							<li> No articles yet. </li>
