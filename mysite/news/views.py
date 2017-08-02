@@ -8,6 +8,7 @@ from .models import Article
 class ArticleListView(ListView):
     template_name='news/index_template.html'
     model = Article
+    queryset = Article.objects.all().order_by('?')
 
 class ArticleDetailView(DetailView):
     template_name = 'news/article_template.html'
