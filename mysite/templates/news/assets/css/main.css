@@ -162,7 +162,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		line-height: 1.5;
+		line-height: 1.0;
 		margin: 0 0 1em 0;
 	}
 
@@ -176,7 +176,8 @@
 	}
 
 	h3 {
-		font-size: 1.35em;
+		font-size: 2.5em;
+                font-family:'pattaya';
 	}
 
 	h4 {
@@ -1259,7 +1260,6 @@
 				transition: opacity 1s ease-in-out;
 				opacity: 1;
 			}
-
 				#header .inner .content h1 {
 					font-size: 4em;
 					font-family: 'Pattaya', sans-serif;
@@ -1269,6 +1269,7 @@
 
 				#header .inner .content h2 {
 					font-size: 1.5em;
+                                        font-family: '', sans-serif;
 					color: #fff;
 					margin: 0 0 1em 0;
 				}
@@ -1277,7 +1278,9 @@
 				-moz-transition: background 1s ease-in-out;
 				-webkit-transition: background 1s ease-in-out;
 				-ms-transition: background 1s ease-in-out;
+                                font-family: 'Monotype Corsiva', sans-serif;
 				transition: background 1s ease-in-out;
+                                font-size: 2.0em;
 				margin: 0;
 				border-radius: 30px;
 			}
@@ -1324,7 +1327,6 @@
 
 			#header.hide .button.hidden, #header.preview .button.hidden {
 				text-decoration: none;
-				padding-top: 1.5em;
 				padding-left: 0;
 				padding-right: 0;
 				background: none;
@@ -1337,13 +1339,13 @@
 					font-family: FontAwesome;
 					font-style: normal;
 					font-weight: normal;
-					text-transform: none !important;
+					text-transform: none !important; 
 				}
 
 				#header.hide .button.hidden:before, #header.preview .button.hidden:before {
 					content: '\f015';
 					color: #FFF;
-					font-size: 1.5em;
+					font-size: 2.0em;
 				}
 
 				#header.hide .button.hidden span, #header.preview .button.hidden span {
@@ -1453,14 +1455,13 @@
 				width: 50%;
 				text-align: left;
 				color: rgba(255, 255, 255, 0.75);
-				padding: 2em;
 				display: inline-block;
 			}
 
 				#footer .inner .content h3,
 				#footer .inner .copyright h3 {
 					color: #FFF;
-					font-size: 1.75em;
+					font-size: 2.5em;
 				}
 
 				#footer .inner .content a,
