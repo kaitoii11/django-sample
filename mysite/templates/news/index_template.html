@@ -31,13 +31,9 @@
 			<div id="main">
 				<div class="inner">
 					<div class="columns">
-						{% for o in object_list|slice:":16" %}
+						{% for o in object_list %}
 							<div class="image fit">
-								{% if o.first == "0" %}
-									<a href="article/{{ o.id }}"><img src="{% static 'images/Number-girl.jpg' %} "  alt="" /></a>
-								{% else %}
-									<a href="article/{{ o.id }}"><img src="{% static 'images'%}/{{ o.first }}.jpg "  alt="" /></a>
-								{% endif %}
+								<a href="article/{{ o.id }}"><img src="{% static 'images'%}/{{ o.first }}-{{12345|make_list|random}}.jpg "  alt="" /></a>
 							</div>
 						{% empty %}
 							<li> No articles yet. </li>

@@ -4,6 +4,14 @@
 	<header>
 		<h2>{{ object.title }}</h2>
 	</header>
-<p>{{ object.body }}</p>
-<p><a href="{{ object.url }}">url</a></p>
+{{ object.body | safe}}
+<p><a href="{{ object.url }}">If you want more infomation, click here!!</a></p>
 {% endblock content %}
+
+
+{% block link %}
+<!--
+<a href="article.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
+<a href="article.html" class="nav next"><span class="fa fa-chevron-right"></span></a> 
+-->
+{% endblock %}
