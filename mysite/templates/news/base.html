@@ -7,7 +7,7 @@
 {% load static %}
 <html>
 	<head>
-		<title>Detail 1 - Radius by TEMPLATED</title>
+		{% block title %} {% endblock %}
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{% static "assets/css/main.css" %}"/>
@@ -33,8 +33,6 @@
 					</div>
 				</div>
 				{% block link %} {% endblock %}
-<!---				<a href="article.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
-				<a href="article.html" class="nav next"><span class="fa fa-chevron-right"></span></a> -->
 			</div>
 
 		<!-- Footer -->
